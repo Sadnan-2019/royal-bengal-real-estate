@@ -219,28 +219,25 @@ const Landing = () => {
         </div>
         <div className=" ">
           
-          <section className="landingthree  blog h-auto       text-white">
+          <section className="landingthree  blog h-auto       ">
             <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
               <div class="flex w-full mx-auto text-left">
                 <div class="relative inline-flex items-center mx-auto align-middle">
                   <div class="text-center">
                     <h1
                       style={{ lineHeight: "120%" }}
-                      className={`slide-text  max-w-5xl text-2xl font-bold leading-none tracking-tighter text-white md:text-5xl lg:text-6xl lg:max-w-7xl    text-transparent   bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600  ${
+                      className={`slide-text  max-w-5xl text-2xl font-bold leading-none tracking-tighter  md:text-5xl lg:text-6xl lg:max-w-7xl    text-transparent   bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600  ${
                         currentSlide === 3 ? "animated" : ""
                       }`}
                     >
                       Long headline to turn <br class="hidden lg:block" />
                       your visitors into users
                     </h1>
-                    {/* <p class="max-w-xl mx-auto mt-8 text-base leading-relaxed text-gray-500">
-                      Free and Premium themes, UI Kit's, templates and landing
-                      pages built with Tailwind CSS, HTML &amp; Next.js.
-                    </p> */}
+                    
                     <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
                       <div class="mt-3 rounded-lg sm:mt-0">
                         <button 
-                        className={`slide-text px-5 py-4 text-base font-medium text-center  transition duration-500 ease-in-out transform bg-blue-600 lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 from-[#92468E] to-[#38235D] inline-flex  md:inline-flex items-center     border          text-white   ${
+                        className={`slide-text px-5 py-4 text-base font-medium text-center  transition duration-500 ease-in-out transform  lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 from-[#92468E] to-[#38235D] inline-flex  md:inline-flex items-center     border          text-white   ${
                           currentSlideTwo === 3 ? "animatedpic" : ""
                         }`}
                         
