@@ -233,10 +233,10 @@ const Landing = () => {
                       Long headline to turn <br class="hidden lg:block" />
                       your visitors into users
                     </h1>
-                    <p class="max-w-xl mx-auto mt-8 text-base leading-relaxed text-gray-500">
+                    {/* <p class="max-w-xl mx-auto mt-8 text-base leading-relaxed text-gray-500">
                       Free and Premium themes, UI Kit's, templates and landing
                       pages built with Tailwind CSS, HTML &amp; Next.js.
-                    </p>
+                    </p> */}
                     <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
                       <div class="mt-3 rounded-lg sm:mt-0">
                         <button 
@@ -261,7 +261,28 @@ const Landing = () => {
                 </div>
               </div>
             </div>
+
+
+            <div
+              data-aos="fade-down"
+              data-aos-easing="linear"
+              data-aos-duration="1500"
+            >
+              <svg
+                className=""
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1440 320"
+              >
+                <path
+                  fill="white"
+                  fill-opacity="50"
+                  d="M0,128L120,160C240,192,480,256,720,272C960,288,1200,256,1320,240L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+                ></path>
+              </svg>
+            </div>
           </section>
+
+          
         </div>
       </Slider>
     </div>
