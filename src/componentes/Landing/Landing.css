@@ -29,7 +29,7 @@
          rgba(49, 16, 234, 0.01),
          rgba(0, 9, 10, 0.9)
        ),
-       url("../../assets/landing-one.jpeg");
+       url("../../assets/bg1.jpg");
      /* background-repeat: no-repeat;
          background-size: cover; */
      height: auto;
@@ -47,7 +47,7 @@
          rgba(2, 1, 9, 0.01),
          rgba(3, 3, 3, 0.9)
        ),
-       url("../../assets/landing-two.jpeg");
+       url("../../assets/bg2.jpg");
      /* background-repeat: no-repeat;
          background-size: cover; */
      height: auto;
@@ -65,7 +65,7 @@
        rgba(193, 212, 192, 0.01),
        rgba(9, 27, 29, 0.9)
      ),
-       url("../../assets/landingthree.jpeg");
+       url("../../assets/bg3.jpg");
      /* background-repeat: no-repeat;
          background-size: cover; */  
      height: auto;
