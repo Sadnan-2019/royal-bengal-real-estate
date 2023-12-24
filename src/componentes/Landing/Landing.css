@@ -1,12 +1,48 @@
 
-.slider-button {
-  background-color: #3498db; /* Set your desired background color */
+.slider-one {
+  background-color: rgb(68, 14, 230);; /* Set your desired background color */
   color: #fff; /* Set the text color */
   padding: 10px 20px;
-  margin: 0 10px;
+  margin: 100 10px;
   cursor: pointer;
   border: none;
   border-radius: 5px;
+  /* z-index: 1; */
+  margin-top: -500px;
+  position: absolute;
+  float: right;
+
+  /* color: rgb(29, 7, 94); */
+}
+.slider-one {
+  -webkit-animation: flickerAnimation 0.5s infinite;
+  -moz-animation: flickerAnimation 0.5s infinite;
+  -o-animation: flickerAnimation 0.5s infinite;
+  animation: flickerAnimation 0.5s infinite;
+  /* color: rgb(29, 7, 94); */
+}
+.slider-two {
+  background-color: rgb(68, 14, 230);; /* Set your desired background color */
+  color: #fff; /* Set the text color */
+  padding: 10px 20px;
+  margin: 100 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  z-index: 1;
+  margin-top: -200px;
+   
+  /* position: absolute; */
+  float: left;
+
+  /* color: rgb(29, 7, 94); */
+}
+.slider-two {
+  -webkit-animation: flickerAnimation 0.5s infinite;
+  -moz-animation: flickerAnimation 0.5s infinite;
+  -o-animation: flickerAnimation 0.5s infinite;
+  animation: flickerAnimation 0.5s infinite;
+  /* color: rgb(29, 7, 94); */
 }
 
 @keyframes flickerAnimation {
@@ -53,19 +89,60 @@
     opacity: 1;
   }
 }
+.slider-one {
+  -webkit-animation: flickerAnimation 0.5s infinite;
+  -moz-animation: flickerAnimation 0.5s infinite;
+  -o-animation: flickerAnimation 0.5s infinite;
+  animation: flickerAnimation 0.5s infinite;
+  /* color: rgb(29, 7, 94); */
+}
 .slick-prev:before,
 .slick-next:before {
   -webkit-animation: flickerAnimation 0.5s infinite;
   -moz-animation: flickerAnimation 0.5s infinite;
   -o-animation: flickerAnimation 0.5s infinite;
   animation: flickerAnimation 0.5s infinite;
-  color: rgb(29, 7, 94);
+  color: rgb(225, 222, 234);
 }
+
+
+/* ////new button place on image  */
+.slick-prev,
+.slick-next {
+  
+  z-index: 1; /* Place the buttons on top of the slides */
+  /* color: white; */
+}
+
+.slick-prev {
+  left: 200px;
+ 
+ 
+}
+
+.slick-next {
+  right: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .full-width-slider {
   width: 100%;
   max-width: 100vw;
   overflow: hidden;
+  position: relative;
 }
 .slider-slide {
   height: 100vh;

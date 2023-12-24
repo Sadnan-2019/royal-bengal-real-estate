@@ -299,11 +299,11 @@ const Landing = () => {
           
         </div>
       </Slider>
-      <div style={{ textAlign: 'center', marginTop: '20px' }}>
-        <button className="slider-button" onClick={goToPrev}>
+      <div  className="">
+        <button className="slider-one" onClick={goToPrev}>
           Previous
         </button>
-        <button className="slider-button" onClick={goToNext}>
+        <button className="slider-two" onClick={goToNext}>
           Next
         </button>
       </div>
