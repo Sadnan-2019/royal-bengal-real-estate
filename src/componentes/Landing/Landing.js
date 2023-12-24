@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import "./Landing.css";
+import 'animate.css';
+
 import { BsArrowRight } from "react-icons/bs";
 // import camera from "../../assets/why6.jpg";
 // import { FaPhoneVolume } from "react-icons/fa";
@@ -11,6 +13,21 @@ import { BsArrowRight } from "react-icons/bs";
 const Landing = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentSlideTwo, setCurrentSlideTwo] = useState(0);
+  // const sliderRef = useRef();
+  const sliderRef = useRef(null);
+  // const sliderRef = React.useRef();
+  const goToPrev = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPrev();
+    }
+  };
+
+  const goToNext = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+    }
+  };
+   
 
   var settings = {
     dots: true,
@@ -29,7 +46,7 @@ const Landing = () => {
     //   setCurrentSlideTwo(index);
     // },
     autoplay: "true",
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1024,
@@ -61,7 +78,7 @@ const Landing = () => {
   return (
     <div className="full-width-slider">
       {/* <h2> Responsive </h2> */}
-      <Slider {...settings} className="">
+      <Slider ref={sliderRef}   {...settings} className="">
         <div className="  ">
           <section className="  landingone  blog h-auto  bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]   text-white">
             <div className="  md:py-20 py-10 lg:py-24 lg:mx-16 mx-8 grid grid-cols-1 lg:grid-cols-1  gap-5 justify-center items-center">
@@ -282,6 +299,14 @@ const Landing = () => {
           
         </div>
       </Slider>
+      <div style={{ textAlign: 'center', marginTop: '20px' }}>
+        <button className="slider-button" onClick={goToPrev}>
+          Previous
+        </button>
+        <button className="slider-button" onClick={goToNext}>
+          Next
+        </button>
+      </div>
     </div>
   );
 };
