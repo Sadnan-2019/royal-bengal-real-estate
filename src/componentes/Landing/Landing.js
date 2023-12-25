@@ -3,7 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import "./Landing.css";
-import 'animate.css';
+import "animate.css";
+import tetimonial from "../../assets/testimonial1.png"
 
 import { BsArrowRight } from "react-icons/bs";
 // import camera from "../../assets/why6.jpg";
@@ -13,24 +14,11 @@ import { BsArrowRight } from "react-icons/bs";
 const Landing = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentSlideTwo, setCurrentSlideTwo] = useState(0);
-  // const sliderRef = useRef();
-  const sliderRef = useRef(null);
-  // const sliderRef = React.useRef();
-  const goToPrev = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickPrev();
-    }
-  };
+  const [currentSlideThree, setCurrentSlideThree] = useState(0);
 
-  const goToNext = () => {
-    if (sliderRef.current) {
-      sliderRef.current.slickNext();
-    }
-  };
-   
+  const sliderRef = useRef(null);
 
   var settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -40,6 +28,7 @@ const Landing = () => {
     afterChange: (index) => {
       setCurrentSlide(index);
       setCurrentSlideTwo(index);
+      setCurrentSlideThree(index);
     },
 
     // afternewChange: (index) => {
@@ -78,7 +67,7 @@ const Landing = () => {
   return (
     <div className="full-width-slider">
       {/* <h2> Responsive </h2> */}
-      <Slider ref={sliderRef}   {...settings} className="">
+      <Slider ref={sliderRef} {...settings} className="">
         <div className="  ">
           <section className="  landingone  blog h-auto  bg-gradient-to-r from-[#157A90] via-[#160a2c] to-[#157A90]   text-white">
             <div className="  md:py-20 py-10 lg:py-24 lg:mx-16 mx-8 grid grid-cols-1 lg:grid-cols-1  gap-5 justify-center items-center">
@@ -108,10 +97,10 @@ const Landing = () => {
 
               <div class="  sm:max-w-xs lg:max-w-xl text-left md:ml-8 lg:order-1 order-2   lg:mt-0  ">
                 <img
-                  // src={camera}
+                  src={tetimonial}
                   alt=""
                   className={`slide-text  md:text-[43px] font-bold text-[20px] text-left   text-transparent text-8xl bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600   ${
-                    currentSlideTwo === 0 ? "animatedpic" : ""
+                    currentSlideTwo === 0 ? "animatedtext" : ""
                   }`}
                 />
               </div>
@@ -235,7 +224,6 @@ const Landing = () => {
           </section>
         </div>
         <div className=" ">
-          
           <section className="landingthree  blog h-auto       ">
             <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl lg:py-24">
               <div class="flex w-full mx-auto text-left">
@@ -250,24 +238,25 @@ const Landing = () => {
                       Long headline to turn <br class="hidden lg:block" />
                       your visitors into users
                     </h1>
-                    
-                    <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
-                      <div class="mt-3 rounded-lg sm:mt-0">
-                        <button 
-                        className={`slide-text px-5 py-4 text-base font-medium text-center  transition duration-500 ease-in-out transform  lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 from-[#92468E] to-[#38235D] inline-flex  md:inline-flex items-center     border          text-white   ${
-                          currentSlideTwo === 3 ? "animatedpic" : ""
-                        }`}
-                        
-                        
-                        class="">
-                          Get bundle
-                        </button>
 
-                      
-                      </div>
+                    <div class="flex justify-center w-full max-w-2xl gap-2 mx-auto mt-6">
                       <div class="mt-3 rounded-lg sm:mt-0 sm:ml-3">
-                        <button class="items-center block px-5 lg:px-10 py-3.5 text-base font-medium text-center text-blue-600 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
+                        <button
+                          class={` slide-text items-center block px-5 lg:px-10 py-3.5 text-base font-medium text-center text-blue-600 transition duration-500 ease-in-out transform border-2 border-white shadow-md rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 ${
+                            currentSlideThree === 3 ? "animatedtext" : ""
+                          }`}
+                        >
                           See features
+                        </button>
+                      </div>
+                      <div class="mt-3 rounded-lg sm:mt-0">
+                        <button
+                          className={`slide-text px-5 py-4 text-base font-medium text-center  transition duration-500 ease-in-out transform  lg:px-10 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 from-[#92468E] to-[#38235D] inline-flex  md:inline-flex items-center     border          text-white   ${
+                            currentSlideTwo === 3 ? "animatedpic" : ""
+                          }`}
+                          class=""
+                        >
+                          Get bundle
                         </button>
                       </div>
                     </div>
@@ -275,7 +264,6 @@ const Landing = () => {
                 </div>
               </div>
             </div>
-
 
             <div
               data-aos="fade-down"
@@ -295,18 +283,16 @@ const Landing = () => {
               </svg>
             </div>
           </section>
-
-          
         </div>
       </Slider>
-      <div  className="">
+      {/* <div  className="">
         <button className="slider-one" onClick={goToPrev}>
           Previous
         </button>
         <button className="slider-two" onClick={goToNext}>
           Next
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };
